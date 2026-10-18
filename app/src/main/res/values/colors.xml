@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta pròpia: terminal de fòsfor verd, carbó i avisos ambre. -->
+    <color name="terminal_bg">#070C09</color>
+    <color name="terminal_panel">#101B14</color>
+    <color name="terminal_panel_alt">#0C1510</color>
+    <color name="terminal_input">#080F0B</color>
+    <color name="terminal_green">#91F9A9</color>
+    <color name="terminal_green_strong">#59E888</color>
+    <color name="terminal_green_dim">#4FA56C</color>
+    <color name="terminal_line">#345A43</color>
+    <color name="terminal_text">#E8F9E9</color>
+    <color name="terminal_muted">#A2BDA8</color>
+    <color name="terminal_amber">#FFCF78</color>
+    <color name="terminal_red">#FF8686</color>
+    <color name="terminal_blue">#99CCFF</color>
+</resources>

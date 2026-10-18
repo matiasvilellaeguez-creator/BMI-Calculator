@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="34dp">
+
+        <!-- Barra de terminal: identitat pròpia, diferenciada del model d'exemple. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.05"
+                android:text="@string/marca"
+                android:textColor="@color/terminal_green"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/terminal_status"
+                android:fontFamily="monospace"
+                android:paddingStart="10dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="7dp"
+                android:text="@string/estat_sistema"
+                android:textColor="@color/terminal_green"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="monospace"
+            android:text="@string/version_sistema"
+            android:textColor="@color/terminal_muted"
+            android:textSize="11sp" />
+
+        <!-- Capçalera en format ordre de consola. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:fontFamily="monospace"
+            android:text="@string/prompt_inici"
+            android:textColor="@color/terminal_green_dim"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:letterSpacing="-0.035"
+            android:text="@string/titol_superior"
+            android:textColor="@color/terminal_text"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/subtitol"
+            android:textColor="@color/terminal_muted"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="16dp"
+                android:layout_height="2dp"
+                android:background="@color/terminal_green" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:fontFamily="monospace"
+                android:text="@string/separador"
+                android:textColor="@color/terminal_green_dim"
+                android:textSize="11sp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="9dp"
+                android:layout_weight="1"
+                android:background="@color/terminal_line" />
+        </LinearLayout>
+
+        <!-- 01 Entrada de nom amb prompt de terminal. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/terminal_panel"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:labelFor="@id/et_nom"
+                android:letterSpacing="0.06"
+                android:text="@string/etiqueta_identitat"
+                android:textColor="@color/terminal_green"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/terminal_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="14dp"
+                    android:fontFamily="monospace"
+                    android:text="&gt;"
+                    android:textColor="@color/terminal_green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_nom"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints="personName"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/nom_hint"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/terminal_text"
+                    android:textColorHint="@color/terminal_muted"
+                    android:textCursorDrawable="@drawable/terminal_cursor"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 02 Pes, amb controls rectes de consola. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/terminal_panel_accent"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.06"
+                    android:text="@string/etiqueta_pes"
+                    android:textColor="@color/terminal_green"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="@string/ajust_manual"
+                    android:textColor="@color/terminal_muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_pes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/terminal_text"
+                    android:textSize="43sp"
+                    android:textStyle="bold"
+                    tools:text="080" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:text="kg"
+                    android:textColor="@color/terminal_green_dim"
+                    android:textSize="15sp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_minus"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/terminal_btn_minus"
+                    android:backgroundTint="@null"
+                    android:contentDescription="@string/disminueix_pes"
+                    android:fontFamily="monospace"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="−"
+                    android:textAllCaps="false"
+                    android:textColor="@color/terminal_green"
+                    android:textSize="23sp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_plus"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/terminal_btn_plus"
+                    android:backgroundTint="@null"
+                    android:contentDescription="@string/augmenta_pes"
+                    android:fontFamily="monospace"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textAllCaps="false"
+                    android:textColor="@color/terminal_text"
+                    android:textSize="23sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="monospace"
+                android:text="@string/pes_interval"
+                android:textColor="@color/terminal_muted"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- 03 Alçada amb control lliscant en fòsfor verd. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/terminal_panel"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:letterSpacing="0.06"
+                    android:text="@string/etiqueta_alcada"
+                    android:textColor="@color/terminal_green"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="@string/ajust_escala"
+                    android:textColor="@color/terminal_muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_alcada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/terminal_text"
+                    android:textSize="43sp"
+                    android:textStyle="bold"
+                    tools:text="180" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:fontFamily="monospace"
+                    android:text="cm"
+                    android:textColor="@color/terminal_green_dim"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/sb_alcada"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:contentDescription="@string/selecciona_alcada"
+                android:max="120"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:progress="80"
+                android:progressBackgroundTint="@null"
+                android:progressDrawable="@drawable/barra_alcada"
+                android:progressTint="@null"
+                android:splitTrack="false"
+                android:thumb="@drawable/cursor_alcada"
+                android:thumbTint="@null" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:text="@string/alcada_min"
+                    android:textColor="@color/terminal_muted"
+                    android:textSize="11sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:gravity="end"
+                    android:text="@string/alcada_max"
+                    android:textColor="@color/terminal_muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/terminal_btn_action"
+            android:backgroundTint="@null"
+            android:contentDescription="@string/calcular_imc"
+            android:fontFamily="monospace"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/calcular_imc"
+            android:textAllCaps="false"
+            android:textColor="@color/terminal_bg"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:fontFamily="monospace"
+            android:text="@string/status_inicial"
+            android:textColor="@color/terminal_green"
+            android:textSize="12sp" />
+
+        <!-- L'informe existeix en XML però es mostra únicament després del càlcul. -->
+        <LinearLayout
+            android:id="@+id/card_resultat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/terminal_result"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="monospace"
+                    android:text="@string/etiqueta_resultat"
+                    android:textColor="@color/terminal_green"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="[ OK ]"
+                    android:textColor="@color/terminal_green"
+                    android:textSize="11sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/terminal_line" />
+            <TextView
+                android:id="@+id/tv_resultat_nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/terminal_muted"
+                android:textSize="14sp"
+                tools:text="Usuari: Matias" />
+            <TextView
+                android:id="@+id/tv_imc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/terminal_green"
+                android:textSize="62sp"
+                android:textStyle="bold"
+                tools:text="24,7" />
+            <TextView
+                android:id="@+id/tv_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textColor="@color/terminal_green"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:text="Pes saludable" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="monospace"
+                android:text="@string/avis_resultat"
+                android:textColor="@color/terminal_muted"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:text="@string/peu_formula"
+                android:textColor="@color/terminal_muted"
+                android:textSize="11sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/peu_marca"
+                android:textColor="@color/terminal_green_dim"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,12 @@
+<resources>
+    <style name="Base.Theme.BMICalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/terminal_green</item>
+        <item name="colorAccent">@color/terminal_green</item>
+        <item name="android:statusBarColor">@color/terminal_bg</item>
+        <item name="android:navigationBarColor">@color/terminal_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="Theme.BMICalculator" parent="Base.Theme.BMICalculator" />
+</resources>

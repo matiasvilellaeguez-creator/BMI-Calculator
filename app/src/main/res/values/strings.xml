@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMC // Terminal</string>
+    <string name="marca">SYS / HEALTH_NODE_01</string>
+    <string name="version_sistema">LOCAL SESSION  ·  v1.0</string>
+    <string name="estat_sistema">● ACTIU</string>
+    <string name="titol_superior">BMI_TERMINAL</string>
+    <string name="subtitol">La teva calculadora d’IMC, en mode consola.</string>
+    <string name="prompt_inici">root@health:~$ ./imc_scan</string>
+    <string name="etiqueta_identitat">01   IDENTIFICACIÓ</string>
+    <string name="etiqueta_pes">02   MASSA CORPORAL</string>
+    <string name="etiqueta_alcada">03   ALÇADA</string>
+    <string name="etiqueta_resultat">OUTPUT / INFORME D’IMC</string>
+    <string name="ajust_manual">[ KG ]</string>
+    <string name="ajust_escala">[ CM ]</string>
+    <string name="pes_interval">RANG PERMÈS: 001 — 300 KG</string>
+    <string name="nom_hint">usuari...</string>
+    <string name="selecciona_alcada">Selecciona l’alçada</string>
+    <string name="disminueix_pes">Disminueix el pes</string>
+    <string name="augmenta_pes">Augmenta el pes</string>
+    <string name="calcular_imc">&gt; EXECUTAR CÀLCUL IMC_</string>
+    <string name="error_nom">Introdueix el teu nom abans de calcular</string>
+    <string name="pes_format">%1$03d</string>
+    <string name="alcada_format">%1$d</string>
+    <string name="alcada_min">100 CM</string>
+    <string name="alcada_max">220 CM</string>
+    <string name="resultat_nom">Usuari: %1$s</string>
+    <string name="pes_baix">Pes baix</string>
+    <string name="pes_saludable">Pes saludable</string>
+    <string name="sobrepes">Sobrepès</string>
+    <string name="obesitat">Obesitat</string>
+    <string name="peu_formula">IMC = KG / M²</string>
+    <string name="status_inicial">&gt; A l’espera de les dades...</string>
+    <string name="status_canvi">&gt; Paràmetres actualitzats. Preparat.</string>
+    <string name="status_error">&gt; ERROR: manca el nom d’usuari.</string>
+    <string name="status_ok">&gt; Càlcul completat correctament [OK]</string>
+    <string name="avis_resultat">Mesura orientativa; no substitueix una valoració mèdica.</string>
+    <string name="peu_marca">END OF SESSION  ·  KOTLIN + XML</string>
+    <string name="separador">// INPUT PARAMETERS</string>
+    <string name="resultat_indicador">[ REPORT GENERATED ]</string>
+</resources>
