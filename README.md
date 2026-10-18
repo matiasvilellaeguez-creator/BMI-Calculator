@@ -18,8 +18,6 @@ A continuació es mostren les dues pantalles principals de l'aplicació:
 |---|---|
 | ![Pantalla inicial](docs/imatges/vista-inicial.png) | ![Resultat IMC](docs/imatges/vista-resultat.png) |
 
-> **Nota:** Les imatges inicials són previsualitzacions del disseny. Abans de lliurar el projecte, s'han de substituir per captures reals de l'aplicació executada en Android.
-
 ### Característiques del disseny
 
 La interfície incorpora diferents elements visuals inspirats en les terminals de programació:
